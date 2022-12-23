@@ -1,10 +1,16 @@
-import { Directive } from '@angular/core';
+import { Directive, Input } from '@angular/core';
 
 @Directive({
-  selector: 'HierarchyDataBinding'
+  selector: 'HierarchyDataBinding',
+  inputs:['data','filter']
 })
 export class HierarchyDataBindingDirective {
 
-  constructor() { }
+  private data:any[]=[]; 
+  private filter:string=""; 
+
+  constructor() { 
+    
+  }
 
 }
